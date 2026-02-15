@@ -1,0 +1,66 @@
+/* App-specific styles */
+
+/* Ensure smooth scrolling behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Remove default margins and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Ensure full width sections */
+section {
+  width: 100%;
+}
+
+/* Pin spacer styling override */
+.pin-spacer {
+  background-color: #0B0B0F !important;
+}
+
+/* Ensure proper z-index stacking for pinned sections */
+.section-pinned {
+  will-change: transform;
+}
+
+/* Mobile optimizations */
+@media (max-width: 1024px) {
+  .glass-card {
+    border-radius: 22px;
+  }
+  
+  .glass-card-sm {
+    border-radius: 18px;
+  }
+}
+
+@media (max-width: 640px) {
+  .glass-card {
+    border-radius: 18px;
+  }
+  
+  .glass-card-sm {
+    border-radius: 14px;
+  }
+  
+  .btn-primary,
+  .btn-secondary {
+    padding: 12px 24px;
+    font-size: 11px;
+  }
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
